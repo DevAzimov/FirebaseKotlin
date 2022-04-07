@@ -26,10 +26,10 @@ class PostAdapter(var activity: MainActivity, var items: ArrayList<Post>) : Recy
         if (holder is PostViewHolder) {
             holder.tv_title.text = post.title!!.toUpperCase()
             holder.tv_body.text = post.body
-//            holder.ll_post.setOnLongClickListener {
-//                activity.apiDeletePost(post)
-//                return@setOnLongClickListener false
-//            }
+            holder.ll_post.setOnLongClickListener {
+                activity.apiDeletePost(post)
+                return@setOnLongClickListener false
+            }
         }
     }
 
